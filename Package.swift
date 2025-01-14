@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftyStarRatingView",
-            path: "SwiftyStarRatingView", // 소스 코드 디렉토리
+            path: "Source", // 소스 코드 디렉토리
             exclude: ["SwiftyStarRatingView.podspec"],
             publicHeadersPath: "."
         )

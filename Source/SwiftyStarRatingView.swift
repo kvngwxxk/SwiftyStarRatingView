@@ -310,7 +310,7 @@ extension SwiftyStarRatingView {
         if let gestureView = gestureRecognizer.view, gestureView.isEqual(self) {
             return !self.isUserInteractionEnabled
         } else {
-            return self.shouldBeginGestureHandler(gestureRecognizer)
+            return self.shouldBeginGestureHandler(gestureRecognizer) ?? true
         }
     }
 

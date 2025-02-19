@@ -155,6 +155,7 @@ fileprivate extension SwiftyStarRatingView {
 
     func customInit() {
         self.isExclusiveTouch = true
+        self.shouldBeginGestureHandler = { _ in return true }
         self.updateAppearance(enabled: self.isEnabled)
     }
 
@@ -310,7 +311,7 @@ extension SwiftyStarRatingView {
         if let gestureView = gestureRecognizer.view, gestureView.isEqual(self) {
             return !self.isUserInteractionEnabled
         } else {
-            return self.shouldBeginGestureHandler(gestureRecognizer) ?? true
+            return self.shouldBeginGestureHandler(gestureRecognizer)
         }
     }
 
